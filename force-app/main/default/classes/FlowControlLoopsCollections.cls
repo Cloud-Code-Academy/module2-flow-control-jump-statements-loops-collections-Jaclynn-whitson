@@ -94,8 +94,20 @@ public with sharing class FlowControlLoopsCollections {
      * @return A string indicating whether the number is "Positive", "Negative", or "Zero", or null if the number is null.
      */
     public static String checkNumber(Integer a) {
-        return null; // Replace null with the variable you used to store the result
+        if(a == null){
+            return null;
+        }
+        else if(a > 0){
+            return 'Positive';
+        }
+        else if(a < 0){
+            return 'Negative';
+        }
+        else{
+            return 'Zero';
+        }
     }
+
 
     /**
      * Question 5
@@ -106,7 +118,15 @@ public with sharing class FlowControlLoopsCollections {
      * @return A string indicating whether the number is "Even" or "Odd", or null if the number is null.
      */
     public static String checkEvenOdd(Integer a) {
-        return null; // Replace null with the variable you used to store the result
+        if(a == null){
+            return null;
+        }
+        if(Math.mod(a, 2) == 0){
+            return 'Even';
+        }
+        else{
+            return 'Odd';
+        }
     }
 
     /**
@@ -117,7 +137,16 @@ public with sharing class FlowControlLoopsCollections {
      * @return A string indicating whether the input is "Empty", "Null", or "Contains Text".
      */
     public static String checkString(String a) {
-        return null; // Replace null with the variable you used to store the result
+        if(a == null){
+            return 'Null'; // Replace null with the variable you used to store the result
+        }
+        else if(a.trim() == ''){
+            return 'Empty';
+        }
+        else{
+            return 'Contains Text';
+        }
+        
     }
 
     /**
