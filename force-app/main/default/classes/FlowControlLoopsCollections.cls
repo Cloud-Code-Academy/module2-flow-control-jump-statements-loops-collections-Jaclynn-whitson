@@ -247,14 +247,12 @@ public with sharing class FlowControlLoopsCollections {
      */
     public static List<Integer> createAndPopulateList() {
         // Create a new list of integers
+        List<Integer> numList = new List<Integer>();
+        numList.add(1);
+        numList.add(2);
+        numList.add(3);
 
-        // Add the integers 1, 2, and 3 to the list
-        // add 1
-        // add 2
-        // add 3
-
-        // Return the populated list
-        return null; // Replace null with the variable you used to store the result
+        return numList; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -268,9 +266,10 @@ public with sharing class FlowControlLoopsCollections {
         List<Integer> numberList = new List<Integer>{1, 2, 3, 4, 5}; //DO NOT CHANGE
 
         // Remove the 3rd element (number 3) from the list
+        numberList.remove(2);
         
         // Return the updated list
-        return null; // Replace null with the variable you used to store the result
+        return numberList; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -282,14 +281,13 @@ public with sharing class FlowControlLoopsCollections {
      */
     public static List<Integer> createIntegerList(Integer n) {
         // Create a new list of integers 
+        List<Integer> numList = new List<Integer>();
 
-        /*
-        for() {
-            //add integer to the list
+        for(Integer i = 1; i <= n; i++){
+            numList.add(i);
         }
-        */ 
 
-        return null; // Replace null with the variable you used to store the result
+        return numList; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -304,9 +302,12 @@ public with sharing class FlowControlLoopsCollections {
         // Create a new Set of strings
         Set<String> stringSet = new Set<String>();
 
-        //add strings to the set
+        for(Integer i = 0; i < inputList.size(); i++){
+            stringSet.add(inputList[i]);
+        }
 
-        return null; // Replace null with the variable you used to store the result
+
+        return stringSet; // Replace null with the variable you used to store the result
     }
 
     /**
