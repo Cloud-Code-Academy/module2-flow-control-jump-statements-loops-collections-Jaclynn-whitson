@@ -14,7 +14,7 @@
 * in flow control, loops, and collections. By mastering these concepts, developers will be able to write more
 * efficient and effective code in their Salesforce projects.
 *
-* @author Your Name
+* @author Jaclynn Maguire
 */
 
 public with sharing class FlowControlLoopsCollections {
@@ -29,7 +29,16 @@ public with sharing class FlowControlLoopsCollections {
      * @return "Hello World!" if x greater than y, otherwise return null.
      */
     public static String helloWorld(Integer x, Integer y) {
-        return null; // Replace null with the variable you used to store the result
+        
+        string result = null;
+
+        if((x != null && y != null) && x > y) {
+            result = 'Hello World!';
+            return result;
+        } else {
+            return result;
+        }
+
     }
 
     /**
@@ -42,7 +51,12 @@ public with sharing class FlowControlLoopsCollections {
      * @return true if the person is eligible to vote, false otherwise.
      */
     public static Boolean votingEligibility(Integer age) {
-        return null; // Replace null with the variable you used to store the result
+        if(age >= 18) {
+            return true;
+        } else {
+            return false;
+        }
+
     }
 
     /**
@@ -56,9 +70,18 @@ public with sharing class FlowControlLoopsCollections {
      */
     public static Integer findMax(Integer num1, Integer num2) {
         // Initialize largestNum as null
-        Integer largestNum = null;
+        //Integer largestNum = null;
+        if(num1 >= num2){
+            return num1;
+        }
+        else if(num1 == null || num2 == null){
+            return null;
+        }
+        else{
+            return num2;
+        }
 
-        return null; // Replace null with the variable you used to store the result
+
     }
 
 
