@@ -340,12 +340,18 @@ public with sharing class FlowControlLoopsCollections {
      * @return The position of the word in the list as a string or -1 if the word was not found.
      */
     public static Integer findWordInList(String wordToFind, List<String> words) {
-        // The variable to store the index of the word
+        Integer foundWord = -1;
 
-        // Loop through the list of words
-            // If the current word is the word to find, exit the loop
+        for(Integer i = 0; i < words.size(); i++){
+            if(words[i] == wordToFind){
+                foundWord = i;
+                break;
 
-        return null; // Replace null with the variable you used to store the result
+            }
+        }
+
+
+        return foundWord; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -357,9 +363,17 @@ public with sharing class FlowControlLoopsCollections {
      */
     public static Decimal countMoney() {
         // The list of money in the wallet, represented in dollars and cents
-        List<Decimal> moneyInWallet = new List<Decimal>{0.50, 10, 3.84, 24.60, 9.08, 50, 4.90}; //DO NOT CHANGE
+        List<Decimal> moneyInWallet = new List<Decimal>{0.50, 10, 3.84, 24.60, 9.08, 50, 4.90}; 
+        Decimal money = 0;
 
-        return null; // Replace null with the variable you used to store the result
+        for(Integer i = 0; i < moneyInWallet.size(); i++){
+            money += moneyInWallet[i];
+            if(money > 40){
+                break;
+            }
+        }
+
+        return money; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -370,15 +384,16 @@ public with sharing class FlowControlLoopsCollections {
      */
     public static Map<String, Integer> addItemsToMap() {
         // Initialize an empty Map
+        Map<String, Integer> fruitMap = new Map<String, Integer>();
 
         // Add key-value pairs to the Map
-        // add Apples => 5
-        // add Oranges => 10
-        // add Bananas => 15
-        // add Pears => 20
-        // add Grapes => 25
+        fruitMap.put('Apples', 5);
+        fruitMap.put('Oranges', 10);
+        fruitMap.put('Bananas', 15);
+        fruitMap.put('Pears', 20);
+        fruitMap.put('Grapes', 25);
 
-        return null; // Replace null with the variable you used to store the result
+        return fruitMap; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -392,17 +407,22 @@ public with sharing class FlowControlLoopsCollections {
      */
     public static Integer getSalary(String employeeName) {
         // Initialize a Map
+        Map<String, Integer> empSalary = new Map<String, Integer>();
 
         // Add key-value pairs to the Map
         // add John Doe => 50000
+        empSalary.put('John Doe', 50000);
         // add Jane Smith => 60000
+        empSalary.put('Jane Smith', 60000);
         // add Sam Brown => 55000
+        empSalary.put('Sam Brown', 55000);
         // add Alice Johnson => 65000
+        empSalary.put('Alice Johnson', 65000);
 
         // Get the salary of the employee
 
         // Return the salary of the employee, or null if the employee is not found in the Map
-        return null; // Replace null with the variable you used to store the result
+        return empSalary.get(employeeName); // Replace null with the variable you used to store the result
     }
 
     /**
@@ -421,18 +441,31 @@ public with sharing class FlowControlLoopsCollections {
 
         // Add key-value pairs to the Map
         // add John Doe => 50000
+        employeeSalaries.put('John Doe', 50000);
         // add Jane Smith => 60000
+        employeeSalaries.put('Jane Smith', 60000);
         // add Sam Brown => 55000
+        employeeSalaries.put('Same Brown', 55000);
         // add Alice Johnson => 65000
+        employeeSalaries.put('Alice Johnson', 65000);
 
         // Initialize a list to store the names of high paid employees
+        List<String> employees = new List<String>();
 
         // Iterate over the Map using a for loop
+        for(String name : employeeSalaries.keySet()){
+            if(employeeSalaries.get(name) > 55000){
+                employees.add(name);
+            }
+
+        }
+
+        
             // Check if the salary of the employee is more than 55000
                 // Add the employee to the list of high paid employees
 
         // Return the list of high paid employees
-        return null; // Replace null with the variable you used to store the result
+        return employees; // Replace null with the variable you used to store the result
     }
 
 }
